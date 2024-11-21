@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>炼器辅助工具 足疗</title>
+    <title>炼器辅助工具 落落</title>
 
     <link rel="stylesheet" href="vendor/2048.min.css" />
     <link rel="stylesheet" href="ai.css" />
@@ -43,7 +43,6 @@
         }
 
         if (dir != undefined) {
-          console.log(dir);
           document.getElementById("dir").innerHTML = dir_text[dir];
         }
       }
@@ -139,21 +138,38 @@
         padding: 0px;
         min-width: 360px;
       }
+
+      #ai-step {
+        margin-left: 20px;
+        padding: 10px;
+        font-size: 20px;
+      }
+      .direction {
+        margin-top: 6px;
+      }
+      #dir {
+        font-weight: bold;
+        color: red;
+        font-size: 40px;
+      }
     </style>
   </head>
 
   <body>
-    足疗内部 炼器AI辅助工具v1.1，仅供内部学习参考<br />
+    内部 炼器AI辅助工具v1.1，仅供内部学习参考<br />
     使用方法：点击格子右侧+1，左侧-1，设置成跟实际情况一样后点“走一步”评估最优解<br />
     完事后把随机出来的位置再次设置好，以此类推<br />
     由于新的格子具有随机性，不能保证100%完全过关<br />
-    祝大家都能拿到大斧头<br />
+    目前已支持炼器自动化、偷桃、推图++ <br />
+    <span style="color: red; font-weight: bold;">有意请+V W_S_NB</span> <br />
     此工具由
-    <span style="color: red">尧光山  足疗</span> 免费提供，仅供娱乐<br />
+    <span style="color: red; font-weight: bold;">愰金山  落落</span> 免费提供，仅供娱乐<br />
+    <span style="color: red; font-weight: bold;">目前支持炼器自动化，<br />
     <div id="grid">
       <button onclick="clear1()">全部清空</button>
-      <button id="ai-step">走一步</button> 最优移动方向：<span id="dir"></span
-      ><br />
+      <button id="ai-step">走一步</button>
+      <div class="direction">最优移动方向：<span id="dir"></span></div>
+       <br />
       <input
         class="cell"
         readonly
